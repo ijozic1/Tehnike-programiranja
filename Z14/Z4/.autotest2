@@ -1,0 +1,135 @@
+{
+    "id": 5531,
+    "name": "Tehnike programiranja (2017\/2018), Tutorijal 14, zadatak 4",
+    "languages": [
+        "C++"
+    ],
+    "tools": {
+        "compile": {
+            "require": "g++",
+            "features": [
+                "optimize",
+                "warn",
+                "pedantic",
+                "C++14"
+            ]
+        },
+        "compile[debug]": {
+            "require": "g++",
+            "features": [
+                "debug",
+                "C++14",
+                "asan"
+            ]
+        },
+        "execute": {
+            "require": "asan"
+        },
+        "debug": [],
+        "profile[asan]": {
+            "require": "asan",
+            "fast": true,
+            "input_file": "stderr.txt"
+        }
+    },
+    "tests": [
+        {
+            "compile": [],
+            "options": [
+                "silent",
+                "terminate"
+            ]
+        },
+        {
+            "id": 1,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\tdouble niz[] = {1, 2, 0.5, 0.2, 6.23};\n\tdouble novi[5]{};\n\tstd::ofstream f (\"dat.bin\", std::ios::binary);\n\tf.write((char *)niz, sizeof niz);\n\tf.close();\n\tIzvrniDatoteku(\"dat.bin\");\n\tstd::ifstream ff (\"dat.bin\", std::ios::binary);\n\tff.read((char *)novi, sizeof novi);\n\tfor (int i = 0; i < 5; ++i) std::cout << novi[i] << \", \";\n\tff.close();",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "6.23, 0.2, 0.5, 2, 1,"
+                ]
+            },
+            "debug": [],
+            "profile[asan]": []
+        },
+        {
+            "id": 2,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\tdouble niz[] = {-1, -2, -3, -4, -5, -5.5, -76, 1, 2, 3, 0, 100};\n\tdouble novi[12]{};\n\tstd::ofstream f (\"dat.bin\", std::ios::binary);\n\tf.write((char *)niz, sizeof niz);\n\tf.close();\n\tIzvrniDatoteku(\"dat.bin\");\n\tstd::ifstream ff (\"dat.bin\", std::ios::binary);\n\tff.read((char *)novi, sizeof novi);\n\tfor (int i = 0; i < 12; ++i) std::cout << novi[i] << \", \";\n\tff.close();",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "100, 0, 3, 2, 1, -76, -5.5, -5, -4, -3, -2, -1,"
+                ]
+            },
+            "debug": [],
+            "profile[asan]": []
+        },
+        {
+            "id": 3,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "{\n\ttry {IzvrniDatoteku(\"txt.nema\"); std::cout << \"Nije bacen izuzetak!\";}\n\tcatch (std::logic_error e) {std::cout << \"Izuzetak: \" << e.what();}\n\tcatch (...) {std::cout << \"Pogresan tip izuzetka!\";}\n}",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "Izuzetak: Datoteka ne postoji"
+                ]
+            },
+            "debug": [],
+            "profile[asan]": []
+        },
+        {
+            "id": 4,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\tdouble niz[] = {777.777};\n\tdouble novi[1]{};\n\tstd::ofstream f (\"dat.bin\", std::ios::binary);\n\tf.write((char *)niz, sizeof niz);\n\tf.close();\n\tIzvrniDatoteku (\"dat.bin\");\n\tstd::ifstream ff (\"dat.bin\", std::ios::binary);\n\tff.read((char *)novi, sizeof novi);\n\tstd::cout << novi[0];\n\tff.close();",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "777.777"
+                ]
+            },
+            "debug": [],
+            "profile[asan]": []
+        },
+        {
+            "id": 5,
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\tdouble niz[1000] {};\n\tfor (int i = 0; i < 1000; ++i) niz[i] = i + 1;\n\tstd::ofstream f (\"dat.bin\", std::ios::binary);\n\tf.write((char *)niz, sizeof niz);\n\tf.close();\n\tIzvrniDatoteku (\"dat.bin\");\n\tstd::ifstream ff (\"dat.bin\", std::ios::binary);\n\tff.read((char *)niz, sizeof niz);\n\tstd::cout << niz[0] << \" \" << niz[123] << \" \" << niz[641] << \" \" << niz[999];\n\tstd::cout << std::endl;\n\tfor (int i = 2; i < 999; i += 24)\n\t\tstd::cout << niz[i] << \" \";\n\tff.close();",
+                    "use_markers": true
+                }
+            ],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "1000 877 359 1\n998 974 950 926 902 878 854 830 806 782 758 734 710 686 662 638 614 590 566 542 518 494 470 446 422 398 374 350 326 302 278 254 230 206 182 158 134 110 86 62 38 14"
+                ]
+            },
+            "debug": [],
+            "profile[asan]": []
+        }
+    ],
+    "version": "2"
+}

@@ -1,0 +1,204 @@
+{
+    "buildhost_description": {
+        "id": "etf.c9sec2",
+        "os": "Linux 5.4.0-137-generic x86_64\nUbuntu 20.04.5 LTS\n"
+    },
+    "tools": {
+        "compile": "9.4.0",
+        "compile[debug]": "9.4.0",
+        "debug": "9.2",
+        "profile[asan]": "9.4.0"
+    },
+    "status": 4,
+    "test_results": {
+        "1": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 0,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:241:28: error: invalid use of incomplete type ‘std::ofstream’ {aka ‘class std::basic_ofstream<char>’}\n  241 |   std::ofstream (\"liga.txt\") << c;\n      |                            ^\nIn file included from /usr/include/c++/9/ios:38,\n                 from /usr/include/c++/9/ostream:38,\n                 from /usr/include/c++/9/iostream:39,\n                 from main.cpp:2:\n/usr/include/c++/9/iosfwd:119:11: note: declaration of ‘std::ofstream’ {aka ‘class std::basic_ofstream<char>’}\n  119 |     class basic_ofstream;\n      |           ^~~~~~~~~~~~~~\nmain.cpp:242:4: error: ‘class Liga’ has no member named ‘AzurirajIzDatoteke’\n  242 |  l.AzurirajIzDatoteke(\"liga.txt\");\n      |    ^~~~~~~~~~~~~~~~~~",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 22,
+                            "col": "28",
+                            "message": "invalid use of incomplete type 'std::ofstream' {aka 'class std::basic_ofstream<char>'}",
+                            "code": "std::ofstream (\"liga.txt\") << c;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 23,
+                            "col": "4",
+                            "message": "'class Liga' has no member named 'AzurirajIzDatoteke'",
+                            "code": "l.AzurirajIzDatoteke(\"liga.txt\");"
+                        }
+                    ]
+                }
+            }
+        },
+        "2": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 1,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:234:4: error: ‘class Liga’ has no member named ‘SacuvajStanje’\n  234 |  l.SacuvajStanje (\"premier.bin\");\n      |    ^~~~~~~~~~~~~\nmain.cpp:238:13: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]\n  238 |  Liga nova (\"premier.bin\"); //kreiramo novu iz datoteke\n      |             ^~~~~~~~~~~~~\n      |             |\n      |             const char*\nmain.cpp:69:16: note:   initializing argument 1 of ‘Liga::Liga(int)’\n   69 | Liga::Liga(int velicina_lige):max_br_timova(velicina_lige), broj_timova(){\n      |            ~~~~^~~~~~~~~~~~~",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 15,
+                            "col": "4",
+                            "message": "'class Liga' has no member named 'SacuvajStanje'",
+                            "code": "l.SacuvajStanje (\"premier.bin\");"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 19,
+                            "col": "13",
+                            "message": "invalid conversion from 'const char*' to 'int' [-fpermissive]",
+                            "code": "Liga nova (\"premier.bin\"); //kreiramo novu iz datoteke"
+                        }
+                    ]
+                }
+            }
+        },
+        "3": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 1,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:224:11: error: ‘class Liga’ has no member named ‘AzurirajIzDatoteke’\n  224 |   try {ll.AzurirajIzDatoteke(\"nepostoji.txt\"); std::cout << \"Nije bacen izuzetak!\";}\n      |           ^~~~~~~~~~~~~~~~~~",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "11",
+                            "message": "'class Liga' has no member named 'AzurirajIzDatoteke'",
+                            "code": "try {ll.AzurirajIzDatoteke(\"nepostoji.txt\"); std::cout << \"Nije bacen izuzetak!\";}"
+                        }
+                    ]
+                }
+            }
+        },
+        "4": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 0,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:225:28: error: invalid use of incomplete type ‘std::ofstream’ {aka ‘class std::basic_ofstream<char>’}\n  225 |   std::ofstream (\"liga.txt\") << c;\n      |                            ^\nIn file included from /usr/include/c++/9/ios:38,\n                 from /usr/include/c++/9/ostream:38,\n                 from /usr/include/c++/9/iostream:39,\n                 from main.cpp:2:\n/usr/include/c++/9/iosfwd:119:11: note: declaration of ‘std::ofstream’ {aka ‘class std::basic_ofstream<char>’}\n  119 |     class basic_ofstream;\n      |           ^~~~~~~~~~~~~~\nmain.cpp:227:13: error: ‘class Liga’ has no member named ‘AzurirajIzDatoteke’\n  227 |     try {ll.AzurirajIzDatoteke(\"liga.txt\"); std::cout << \"Nije bacen izuzetak!\";}\n      |             ^~~~~~~~~~~~~~~~~~",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "28",
+                            "message": "invalid use of incomplete type 'std::ofstream' {aka 'class std::basic_ofstream<char>'}",
+                            "code": "std::ofstream (\"liga.txt\") << c;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 8,
+                            "col": "13",
+                            "message": "'class Liga' has no member named 'AzurirajIzDatoteke'",
+                            "code": "try {ll.AzurirajIzDatoteke(\"liga.txt\"); std::cout << \"Nije bacen izuzetak!\";}"
+                        }
+                    ]
+                }
+            }
+        },
+        "5": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 1,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:225:28: error: invalid use of incomplete type ‘std::ofstream’ {aka ‘class std::basic_ofstream<char>’}\n  225 |   std::ofstream (\"liga.txt\") << c;\n      |                            ^\nIn file included from /usr/include/c++/9/ios:38,\n                 from /usr/include/c++/9/ostream:38,\n                 from /usr/include/c++/9/iostream:39,\n                 from main.cpp:2:\n/usr/include/c++/9/iosfwd:119:11: note: declaration of ‘std::ofstream’ {aka ‘class std::basic_ofstream<char>’}\n  119 |     class basic_ofstream;\n      |           ^~~~~~~~~~~~~~\nmain.cpp:227:13: error: ‘class Liga’ has no member named ‘AzurirajIzDatoteke’\n  227 |     try {ll.AzurirajIzDatoteke(\"liga.txt\"); std::cout << \"Nije bacen izuzetak!\";}\n      |             ^~~~~~~~~~~~~~~~~~",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 6,
+                            "col": "28",
+                            "message": "invalid use of incomplete type 'std::ofstream' {aka 'class std::basic_ofstream<char>'}",
+                            "code": "std::ofstream (\"liga.txt\") << c;"
+                        },
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 8,
+                            "col": "13",
+                            "message": "'class Liga' has no member named 'AzurirajIzDatoteke'",
+                            "code": "try {ll.AzurirajIzDatoteke(\"liga.txt\"); std::cout << \"Nije bacen izuzetak!\";}"
+                        }
+                    ]
+                }
+            }
+        },
+        "6": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 0,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:224:17: error: invalid conversion from ‘const char*’ to ‘int’ [-fpermissive]\n  224 |     try {Liga l(\"liga.txt.nema\"); std::cout << \"Nije bacen izuzetak!\";}\n      |                 ^~~~~~~~~~~~~~~\n      |                 |\n      |                 const char*\nmain.cpp:69:16: note:   initializing argument 1 of ‘Liga::Liga(int)’\n   69 | Liga::Liga(int velicina_lige):max_br_timova(velicina_lige), broj_timova(){\n      |            ~~~~^~~~~~~~~~~~~",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "TEST_CODE",
+                            "line": 5,
+                            "col": "17",
+                            "message": "invalid conversion from 'const char*' to 'int' [-fpermissive]",
+                            "code": "try {Liga l(\"liga.txt.nema\"); std::cout << \"Nije bacen izuzetak!\";}"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "time": 1686839639
+}

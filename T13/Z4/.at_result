@@ -1,0 +1,214 @@
+{
+    "buildhost_description": {
+        "id": "etf.c9prim2",
+        "os": "Linux 5.15.0-58-generic x86_64\nUbuntu 20.04.5 LTS\n"
+    },
+    "tools": {
+        "compile": "9.4.0",
+        "compile[debug]": "9.4.0",
+        "debug": "9.2",
+        "profile[asan]": "9.4.0"
+    },
+    "status": 4,
+    "test_results": {
+        "3811": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "Student bachelor studija Dusko Dugousko, sa brojem indeksa 1234,\nima prosjek 7.5.\nStudent master studija Paja Patak, sa brojem indeksa 4312,\nzavrsio bachelor studij godine 2015,ima prosjek 8.",
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[asan]": {
+                    "output": "",
+                    "status": 1,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "3812": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "Dusko Dugousko 1234 0 5\nPaja Patak 4312 0 5",
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[asan]": {
+                    "output": "",
+                    "status": 1,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "3813": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "Student bachelor studija Dusko Dugousko, sa brojem indeksa 1234,\nima prosjek 5.",
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[asan]": {
+                    "output": "",
+                    "status": 1,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "3814": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "Student master studija Paja Patak, sa brojem indeksa 4312,\nzavrsio bachelor studij godine 2015,ima prosjek 5.",
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[asan]": {
+                    "output": "",
+                    "status": 1,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "3815": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "Student bachelor studija Dusko Dugousko, sa brojem indeksa 1234,\nima prosjek 5.\nStudent master studija Paja Patak, sa brojem indeksa 4312,\nzavrsio bachelor studij godine 2015,ima prosjek 5.\nStudent bachelor studija Dusko Dugousko, sa brojem indeksa 1234,\nima prosjek 5.\nStudent master studija Paja Patak, sa brojem indeksa 4312,\nzavrsio bachelor studij godine 2015,ima prosjek 5.",
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[asan]": {
+                    "output": "",
+                    "status": 1,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "71234": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "Student bachelor studija Dusko Dugousko, sa brojem indeksa 1234,\nima prosjek 5.\nStudent master studija Paja Patak, sa brojem indeksa 4312,\nzavrsio bachelor studij godine 2015,ima prosjek 5.",
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[asan]": {
+                    "output": "",
+                    "status": 1,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        }
+    },
+    "time": 1686268169
+}

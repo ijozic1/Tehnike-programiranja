@@ -1,0 +1,39 @@
+{
+    "buildhost_description": {
+        "id": "gcloud",
+        "os": "Linux 5.10.0-18-cloud-amd64 x86_64\nDebian GNU/Linux 11 (bullseye)\n"
+    },
+    "tools": {
+        "compile": "10.2.1 20210110",
+        "compile[debug]": "10.2.1 20210110",
+        "debug": "10.1.90.20210103-git",
+        "profile[asan]": "10.2.1 20210110"
+    },
+    "status": 4,
+    "test_results": {
+        "1": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "compile": {
+                    "status": 5,
+                    "duration": 1,
+                    "output": "main.cpp: In function ‘int main()’:\nmain.cpp:39:29: error: ‘p_ucenici’ may be used uninitialized in this function [-Werror=maybe-uninitialized]\n   39 |             OslobodiMemoriju(p_ucenici, broj_ucenika);\n      |             ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~\ncc1plus: some warnings being treated as errors",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "main.cpp",
+                            "line": "39",
+                            "col": "29",
+                            "message": "'p_ucenici' may be used uninitialized in this function",
+                            "code": "OslobodiMemoriju(p_ucenici, broj_ucenika);"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "time": 1683710370
+}

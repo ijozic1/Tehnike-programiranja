@@ -1,0 +1,289 @@
+{
+    "buildhost_description": {
+        "id": "etf.c9sec2",
+        "os": "Linux 5.4.0-137-generic x86_64\nUbuntu 20.04.5 LTS\n"
+    },
+    "tools": {
+        "compile": "9.4.0",
+        "compile[debug]": "9.4.0",
+        "debug": "9.2",
+        "profile[asan]": "9.4.0"
+    },
+    "status": 4,
+    "test_results": {
+        "3395": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "Koliko zelite elemenata: Unesite elemente: Kreirani niz: 7.39 2 4 -1.111 0 4 6 3.12 -7 2.5",
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[asan]": {
+                    "output": "",
+                    "status": 1,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "3396": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "Koliko zelite elemenata: Nedovoljno memorije!",
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[asan]": {
+                    "output": "",
+                    "status": 1,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "3397": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "Sunday Saturday Friday Thursday Wednesday Tuesday Monday",
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[asan]": {
+                    "output": "",
+                    "status": 1,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "3399": {
+            "success": false,
+            "status": 3,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 5,
+                    "duration": 1,
+                    "output": "main.cpp: In instantiation of ‘decltype (& * pocetak) KreirajIzvrnutiNiz(IterTip, IterTip) [with IterTip = std::_Fwd_list_iterator<int>; decltype (& * pocetak) = int*]’:\nmain.cpp:52:45:   required from here\nmain.cpp:13:44: error: no match for ‘operator-’ (operand types are ‘std::_Fwd_list_iterator<int>’ and ‘std::_Fwd_list_iterator<int>’)\n   13 |         noviPocetak=new tipElement[izaKraja-pocetak];\n      |                                    ~~~~~~~~^~~~~~~~\nIn file included from /usr/include/c++/9/bits/stl_algobase.h:67,\n                 from /usr/include/c++/9/bits/char_traits.h:39,\n                 from /usr/include/c++/9/ios:40,\n                 from /usr/include/c++/9/ostream:38,\n                 from /usr/include/c++/9/iostream:39,\n                 from main.cpp:2:\n/usr/include/c++/9/bits/stl_iterator.h:415:5: note: candidate: ‘template<class _IteratorL, class _IteratorR> decltype ((__y.base() - __x.base())) std::operator-(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)’\n  415 |     operator-(const reverse_iterator<_IteratorL>& __x,\n      |     ^~~~~~~~\n/usr/include/c++/9/bits/stl_iterator.h:415:5: note:   template argument deduction/substitution failed:\nmain.cpp:13:44: note:   ‘std::_Fwd_list_iterator<int>’ is not derived from ‘const std::reverse_iterator<_Iterator>’\n   13 |         noviPocetak=new tipElement[izaKraja-pocetak];\n      |                                    ~~~~~~~~^~~~~~~~\nIn file included from /usr/include/c++/9/bits/stl_algobase.h:67,\n                 from /usr/include/c++/9/bits/char_traits.h:39,\n                 from /usr/include/c++/9/ios:40,\n                 from /usr/include/c++/9/ostream:38,\n                 from /usr/include/c++/9/iostream:39,\n                 from main.cpp:2:\n/usr/include/c++/9/bits/stl_iterator.h:1209:5: note: candidate: ‘template<class _IteratorL, class _IteratorR> decltype ((__x.base() - __y.base())) std::operator-(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)’\n 1209 |     operator-(const move_iterator<_IteratorL>& __x,\n      |     ^~~~~~~~\n/usr/include/c++/9/bits/stl_iterator.h:1209:5: note:   template argument deduction/substitution failed:\nmain.cpp:13:44: note:   ‘std::_Fwd_list_iterator<int>’ is not derived from ‘const std::move_iterator<_IteratorL>’\n   13 |         noviPocetak=new tipElement[izaKraja-pocetak];\n      |                                    ~~~~~~~~^~~~~~~~\nIn file included from /usr/include/c++/9/vector:68,\n                 from main.cpp:6:\n/usr/include/c++/9/bits/stl_bvector.h:214:3: note: candidate: ‘std::ptrdiff_t std::operator-(const std::_Bit_iterator_base&, const std::_Bit_iterator_base&)’\n  214 |   operator-(const _Bit_iterator_base& __x, const _Bit_iterator_base& __y)\n      |   ^~~~~~~~\n/usr/include/c++/9/bits/stl_bvector.h:214:39: note:   no known conversion for argument 1 from ‘std::_Fwd_list_iterator<int>’ to ‘const std::_Bit_iterator_base&’\n  214 |   operator-(const _Bit_iterator_base& __x, const _Bit_iterator_base& __y)\n      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~\nmain.cpp:15:38: error: no match for ‘operator-’ (operand types are ‘std::_Fwd_list_iterator<int>’ and ‘std::_Fwd_list_iterator<int>’)\n   15 |         for (int i = 0; i < izaKraja - pocetak; i++) {\n      |                             ~~~~~~~~~^~~~~~~~~\nIn file included from /usr/include/c++/9/bits/stl_algobase.h:67,\n                 from /usr/include/c++/9/bits/char_traits.h:39,\n                 from /usr/include/c++/9/ios:40,\n                 from /usr/include/c++/9/ostream:38,\n                 from /usr/include/c++/9/iostream:39,\n                 from main.cpp:2:\n/usr/include/c++/9/bits/stl_iterator.h:415:5: note: candidate: ‘template<class _IteratorL, class _IteratorR> decltype ((__y.base() - __x.base())) std::operator-(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)’\n  415 |     operator-(const reverse_iterator<_IteratorL>& __x,\n      |     ^~~~~~~~\n/usr/include/c++/9/bits/stl_iterator.h:415:5: note:   template argument deduction/substitution failed:\nmain.cpp:15:38: note:   ‘std::_Fwd_list_iterator<int>’ is not derived from ‘const std::reverse_iterator<_Iterator>’\n   15 |         for (int i = 0; i < izaKraja - pocetak; i++) {\n      |                             ~~~~~~~~~^~~~~~~~~\nIn file included from /usr/include/c++/9/bits/stl_algobase.h:67,\n                 from /usr/include/c++/9/bits/char_traits.h:39,\n                 from /usr/include/c++/9/ios:40,\n                 from /usr/include/c++/9/ostream:38,\n                 from /usr/include/c++/9/iostream:39,\n                 from main.cpp:2:\n/usr/include/c++/9/bits/stl_iterator.h:1209:5: note: candidate: ‘template<class _IteratorL, class _IteratorR> decltype ((__x.base() - __y.base())) std::operator-(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)’\n 1209 |     operator-(const move_iterator<_IteratorL>& __x,\n      |     ^~~~~~~~\n/usr/include/c++/9/bits/stl_iterator.h:1209:5: note:   template argument deduction/substitution failed:\nmain.cpp:15:38: note:   ‘std::_Fwd_list_iterator<int>’ is not derived from ‘const std::move_iterator<_IteratorL>’\n   15 |         for (int i = 0; i < izaKraja - pocetak; i++) {\n      |                             ~~~~~~~~~^~~~~~~~~\nIn file included from /usr/include/c++/9/vector:68,\n                 from main.cpp:6:\n/usr/include/c++/9/bits/stl_bvector.h:214:3: note: candidate: ‘std::ptrdiff_t std::operator-(const std::_Bit_iterator_base&, const std::_Bit_iterator_base&)’\n  214 |   operator-(const _Bit_iterator_base& __x, const _Bit_iterator_base& __y)\n      |   ^~~~~~~~\n/usr/include/c++/9/bits/stl_bvector.h:214:39: note:   no known conversion for argument 1 from ‘std::_Fwd_list_iterator<int>’ to ‘const std::_Bit_iterator_base&’\n  214 |   operator-(const _Bit_iterator_base& __x, const _Bit_iterator_base& __y)\n      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~\nmain.cpp:16:36: error: no match for ‘operator-’ (operand types are ‘std::_Fwd_list_iterator<int>’ and ‘int’)\n   16 |             *noviKraj = *(izaKraja - i - 1);\n      |                           ~~~~~~~~~^~~\nIn file included from /usr/include/c++/9/bits/stl_algobase.h:67,\n                 from /usr/include/c++/9/bits/char_traits.h:39,\n                 from /usr/include/c++/9/ios:40,\n                 from /usr/include/c++/9/ostream:38,\n                 from /usr/include/c++/9/iostream:39,\n                 from main.cpp:2:\n/usr/include/c++/9/bits/stl_iterator.h:415:5: note: candidate: ‘template<class _IteratorL, class _IteratorR> decltype ((__y.base() - __x.base())) std::operator-(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)’\n  415 |     operator-(const reverse_iterator<_IteratorL>& __x,\n      |     ^~~~~~~~\n/usr/include/c++/9/bits/stl_iterator.h:415:5: note:   template argument deduction/substitution failed:\nmain.cpp:16:36: note:   ‘std::_Fwd_list_iterator<int>’ is not derived from ‘const std::reverse_iterator<_Iterator>’\n   16 |             *noviKraj = *(izaKraja - i - 1);\n      |                           ~~~~~~~~~^~~\nIn file included from /usr/include/c++/9/bits/stl_algobase.h:67,\n                 from /usr/include/c++/9/bits/char_traits.h:39,\n                 from /usr/include/c++/9/ios:40,\n                 from /usr/include/c++/9/ostream:38,\n                 from /usr/include/c++/9/iostream:39,\n                 from main.cpp:2:\n/usr/include/c++/9/bits/stl_iterator.h:1209:5: note: candidate: ‘template<class _IteratorL, class _IteratorR> decltype ((__x.base() - __y.base())) std::operator-(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)’\n 1209 |     operator-(const move_iterator<_IteratorL>& __x,\n      |     ^~~~~~~~\n/usr/include/c++/9/bits/stl_iterator.h:1209:5: note:   template argument deduction/substitution failed:\nmain.cpp:16:36: note:   ‘std::_Fwd_list_iterator<int>’ is not derived from ‘const std::move_iterator<_IteratorL>’\n   16 |             *noviKraj = *(izaKraja - i - 1);\n      |                           ~~~~~~~~~^~~\nIn file included from /usr/include/c++/9/vector:68,\n                 from main.cpp:6:\n/usr/include/c++/9/bits/stl_bvector.h:214:3: note: candidate: ‘std::ptrdiff_t std::operator-(const std::_Bit_iterator_base&, const std::_Bit_iterator_base&)’\n  214 |   operator-(const _Bit_iterator_base& __x, const _Bit_iterator_base& __y)\n      |   ^~~~~~~~\n/usr/include/c++/9/bits/stl_bvector.h:214:39: note:   no known conversion for argument 1 from ‘std::_Fwd_list_iterator<int>’ to ‘const std::_Bit_iterator_base&’\n  214 |   operator-(const _Bit_iterator_base& __x, const _Bit_iterator_base& __y)\n      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~",
+                    "exit_code": 1,
+                    "success": false,
+                    "parsed_output": [
+                        {
+                            "type": "error",
+                            "file": "main.cpp",
+                            "line": 13,
+                            "col": "44",
+                            "message": "no match for 'operator-' (operand types are 'std::_Fwd_list_iterator<int>' and 'std::_Fwd_list_iterator<int>')",
+                            "code": "noviPocetak=new tipElement[izaKraja-pocetak];"
+                        },
+                        {
+                            "type": "error",
+                            "file": "main.cpp",
+                            "line": 15,
+                            "col": "38",
+                            "message": "no match for 'operator-' (operand types are 'std::_Fwd_list_iterator<int>' and 'std::_Fwd_list_iterator<int>')",
+                            "code": "for (int i = 0; i < izaKraja - pocetak; i++) {"
+                        },
+                        {
+                            "type": "error",
+                            "file": "main.cpp",
+                            "line": 16,
+                            "col": "36",
+                            "message": "no match for 'operator-' (operand types are 'std::_Fwd_list_iterator<int>' and 'int')",
+                            "code": "*noviKraj = *(izaKraja - i - 1);"
+                        }
+                    ]
+                }
+            }
+        },
+        "3400": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "Svaka čast",
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[asan]": {
+                    "output": "",
+                    "status": 1,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "3401": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "98 67 23 34 21",
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[asan]": {
+                    "output": "",
+                    "status": 1,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "3433": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "Nedovoljno memorije!",
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[asan]": {
+                    "output": "",
+                    "status": 1,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "3441": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "5 4 3 2 1 New pozvan 1 puta,  delete [] pozvan 1 puta, a alocirano ukupno 40 bajta i to redom: 40",
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[asan]": {
+                    "output": "",
+                    "status": 1,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        }
+    },
+    "time": 1681246142
+}
